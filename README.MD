@@ -1,11 +1,12 @@
 
-# 📌 Calculadora Baseada em Texto em C
+# 📌 Estoque em C
 
 ## 📖 Descrição
 Este projeto é um sistema de estoque que gere um arquivo .txt com a quantidade de itens no estoque. Com as funções de adicionar, remover e listar os itens.
 
 ## 🎥 Demonstração
 ![demostração](imgs/Capturar.PNG)
+
 ![demostração](imgs/Capturar2.PNG)
 
 
