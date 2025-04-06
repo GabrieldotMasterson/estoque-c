@@ -29,13 +29,14 @@ void adicionarItem(FILE *arquivo) {
     fprintf(arquivo, "%s\n%d\n", item, qtd);
     fflush(arquivo); // DEBUG: Garantir que grava no arquivo
 
-    printf("Adicionado: %s, %d\n", item, qtd);
+    printf("Item adicionado com sucesso!\n");
 }
 
 void listarEstoque() {
     FILE *arquivo = fopen("estoque.txt", "r");
     char item[MAX_ITEM];
     int qtd;
+    int estoqueVazio = 0;
 
     if (arquivo == NULL) {
         printf("Erro ao abrir o arquivo.\n");
@@ -43,10 +44,17 @@ void listarEstoque() {
     }
 
     printf("\n--- Itens no Estoque ---\n");
+
     while (fgets(item, MAX_ITEM, arquivo)) {
-        item[strcspn(item, "\n")] = '\0'; 
-        fscanf(arquivo, "%d\n", &qtd);
-        printf("Item: %s | Quantidade: %d\n", item, qtd);
+        item[strcspn(item, "\n")] = '\0';
+        if (fscanf(arquivo, "%d\n", &qtd) == 1) {
+            printf("Item: %s | Quantidade: %d\n", item, qtd);
+            estoqueVazio = 1;
+        }
+    }
+
+    if (!estoqueVazio) {
+        printf("O estoque está vazio.\n");
     }
 
     fclose(arquivo);
