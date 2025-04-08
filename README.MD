@@ -45,7 +45,7 @@ Este projeto é um sistema de estoque que gere um arquivo .txt com a quantidade 
 ## 📂 Estrutura do Projeto
 
 ```
-calculadora-c/
+estoque-c/
 │── main.c
 │── README.md
 │── LICENSE
@@ -54,7 +54,7 @@ calculadora-c/
 
 ```
 
-- `main.c`: Código-fonte principal da calculadora.
+- `main.c`: Código-fonte principal do estoque.
 - `README.md`: Documentação do projeto.
 - `LICENSE`: Arquivo de licença do projeto.
 - `imgs`: pasta de imagens.
