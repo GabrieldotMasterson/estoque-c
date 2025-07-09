@@ -43,12 +43,12 @@ void listarEstoque() {
         return;
     }
 
-    printf("\n--- Itens no Estoque ---\n");
+    printf("\nEstoque Atual\n");
 
     while (fgets(item, MAX_ITEM, arquivo)) {
         item[strcspn(item, "\n")] = '\0';
         if (fscanf(arquivo, "%d\n", &qtd) == 1) {
-            printf("Item: %s | Quantidade: %d\n", item, qtd);
+            printf("Nome: %s | Quantidade: %d\n", item, qtd);
             estoqueVazio = 1;
         }
     }
